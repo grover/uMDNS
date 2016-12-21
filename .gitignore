@@ -31,3 +31,8 @@
 # Debug files
 *.dSYM/
 *.su
+
+# CMake, Doxygen etc.
+_build*
+apidoc/
+.cmaketools.json

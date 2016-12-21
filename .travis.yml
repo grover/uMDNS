@@ -1,0 +1,33 @@
+language: c
+compiler:
+- gcc
+env:
+  global:
+    # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created via the "travis encrypt" command using the project repo's public key
+    - secure: "dNWwZz6yigQB9hz/r7eZ+4ztDKXe9ysNqIM7uxFx/U1cxoIz9ONDIdTeiJaQkZseHREvMaftMQcO0FJng2+IFauE0zb8cmGmXSoTWDfx3S9jXuIg4kvfQB9HGJYJmlO/Jnxiek+sGozoCw4wKuzai7o26/o/SAVRs8T4WrYCfc3kjxwDinXAW9N+ZMgXJwKwPhbZO0FfkCQQSFTf2YuHzHHBbtQ72EHyrGMTBZCdifwcpN4V8MIQ4zPbIzrH0UOJSrfoQhNQF8LEldl2DMxmkgUadogSvse0CI7bWf7pGjyp2LMoYmm/1Um5Qk62DRiZqKaU8udp9XW7ryraF4WftFOjM+yMCafmZeMEpxqGoaEmzSpNM1RLVaNVafSIzqglUlSnY0DQ4xtaJPBOBN4zFGkaG32VGYU+FO/oKQqT7yU6XytPAg89Nen08cQ81dbOGd6hjJ6JnwlVe3IilXmnJAgXzRUtC81LJqWtSHDICIL7og22BofY9oU2Oxm4zt6mo7HHfehWWYYKhmihxYOCrcRlz62xNd2FDqzwGxUK+u8kQcTzQhm0q3p/w7rD2bqyNDNYFEM0LTz+FzkkoyMUwAqPj92NXylz3XoADmmcacHGXjY9qgPjyZF8otkhnxMl/6FdrDKWUAVs0RL0HKxQSfmlCtZ93JjRdTg5lDVIRCs="
+addons:
+  coverity_scan:
+    project:
+      name: "grover/uMDNS"
+    notification_email: michael.ruck@michaelruck.de
+    build_command_prepend: "mkdir -p build && cd $_ && cmake .."
+    build_command: "make -j4"
+    branch_pattern: coverity_scan
+  apt:
+    sources:
+    - george-edison55-precise-backports # cmake 3.2.3 / doxygen 1.8.3
+    packages:
+    - cmake
+    - cmake-data
+    - doxygen
+    - graphviz
+sudo: required
+dist: trusty
+cache: ccache
+script:
+- mkdir -p build && cd $_
+- cmake --version
+- cmake .. && make
+- cd ..
+- mkdir -p apidoc
+- doxygen Doxyfile

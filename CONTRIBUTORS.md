@@ -1,4 +1,4 @@
-microMDNS contributors (sorted alphabeticaly)
+uMDNS contributors (sorted alphabeticaly)
 =================================================
 
 * **[Michael Fröhlich](https://github.com/grover)**
@@ -6,4 +6,4 @@ microMDNS contributors (sorted alphabeticaly)
   * Author and maintainer
   * Initial feature development
 
-**[Full contributors list](https://github.com/grover/microMDNS/contributors).**
+**[Full contributors list](https://github.com/grover/uMDNS/contributors).**
