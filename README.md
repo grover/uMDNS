@@ -54,7 +54,8 @@ This project is licensed under the MIT License - see the [LICENSE.md][9] file fo
 
 This project uses code that has been created by others in the open source community:
 
-* This project uses [Unity - Simple Unit Testing for C][12]
+* [Unity - Simple Unit Testing for C][12]
+* [Sanitizer modules for CMake][14]
 
 The licenses of the respective projects apply.
 
@@ -71,3 +72,4 @@ The licenses of the respective projects apply.
 [11]: http://umdns.readthedocs.io/en/latest/?badge=latest
 [12]: https://github.com/ThrowTheSwitch/Unity
 [13]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
+[14]: https://github.com/arsenm/sanitizers-cmake
