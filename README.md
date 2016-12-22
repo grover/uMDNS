@@ -4,7 +4,7 @@
 [![Coverity Scan Build Status](https://scan.coverity.com/projects/11239/badge.svg)][10]
 [![Documentation Status](https://readthedocs.org/projects/umdns/badge/?version=latest)][11]
 
-This is an implementation of an [RFC6762 MDNS responder][2] for low power, low 
+This is an implementation of an [RFC 6762 MDNS responder][2] for low power, low 
 memory microcontrollers. It's primary use is with the [HomeKit Accessory
 Framework][3], but has several properties that may be of interest for other projects.
 
