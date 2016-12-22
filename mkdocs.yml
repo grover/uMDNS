@@ -1,0 +1,11 @@
+site_name: uMDNS
+site_url: http://umdns.readthedocs.io/
+site_description: uMDNS - an MDNS responder for connected microcontrollers
+site_author: Michael Fr&ouml;hlich
+
+repo_url: https://github.com/grover/uMDNS
+
+pages:
+- Home: index.md
+
+copyright: Copyright &copy; 2016 by Michael Fr&ouml;hlich

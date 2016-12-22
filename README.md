@@ -3,6 +3,7 @@ uMDNS
 
 [![Build Status](https://travis-ci.org/grover/uMDNS.svg?branch=master)][1]
 [![Coverity Scan Build Status](https://scan.coverity.com/projects/11239/badge.svg)][10]
+[![Documentation Status](https://readthedocs.org/projects/umdns/badge/?version=latest)][11]
 
 This is an implementation of an [RFC6762 MDNS responder][2] for low power, low 
 memory microcontrollers. It's primary use is with the [HomeKit Accessory
@@ -58,3 +59,4 @@ This project is licensed under the MIT License - see the [LICENSE.md][9] file fo
 [8]: CONTRIBUTORS.md
 [9]: LICENSE.md
 [10]: https://scan.coverity.com/projects/grover-umdns
+[11]: http://umdns.readthedocs.io/en/latest/?badge=latest
