@@ -38,7 +38,7 @@
  * uMDNS has already been initialized. The second call was ignored.
  *
  */
-int umdns_init(void);
+umdns_result_t umdns_init(void);
 
 /**
  * @brief Shuts down uMDNS.

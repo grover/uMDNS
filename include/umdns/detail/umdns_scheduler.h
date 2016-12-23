@@ -55,7 +55,7 @@ typedef void (*umdns_callback_fn_t)();
  * sent.
  *
  */
-extern int umdnsx_schedule_callback(
+extern umdns_result_t umdnsx_schedule_callback(
   uint32_t timeout,
   umdns_callback_fn_t callback);
 

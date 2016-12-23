@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.2)
 
 project(uMDNS)
-include(CMakeToolsHelpers)
+include(CMakeToolsHelpers OPTIONAL)
 
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/external/sanitizers-cmake/cmake" ${CMAKE_MODULE_PATH})
 

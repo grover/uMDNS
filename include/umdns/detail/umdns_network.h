@@ -62,7 +62,7 @@ extern void umdnsx_name_conflict_detected(void);
  * Opening the socket has failed. This will fail the initialization of uMDNS.
  *
  */
-extern int umdnsx_open_socket();
+extern umdns_result_t umdnsx_open_socket();
 
 /**
  * @brief Closes the network interface opened with @ref umdns_open_socket.
@@ -131,7 +131,7 @@ extern void umdnsx_send(
  * uMDNS was not initialized with @ref umdns_init.
  *
  */
-int umdns_packet_received(
+umdns_result_t umdns_packet_received(
     const umdns_endpoint_t *sender,
     const uint8_t *packet,
     size_t length);
