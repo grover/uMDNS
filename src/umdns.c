@@ -11,7 +11,7 @@
 #include <umdns/umdns.h>
 
 int umdns_init(void) {
-  return UMDNS_ERR_FAILED;
+  return kUMDNSErrorFailed;
 }
 
 void umdns_shutdown(void) {

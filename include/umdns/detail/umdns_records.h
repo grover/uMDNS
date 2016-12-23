@@ -11,8 +11,6 @@
 #ifndef UMDNS_RECORDS_H
 #define UMDNS_RECORDS_H
 
-#include <stdint.h>
-
 // @brief Indicates an A record
 #define UMDNS_A_RECORD   0x00
 // @brief Indicates a PTR record
@@ -91,5 +89,18 @@ typedef struct umdns_srv_record {
   /// @brief The name of the the host that provides the service.
   const char *target;
 } umdns_srv_record_t;
+
+/**
+ * @brief The uMDNS resource records to be announced.
+ *
+ * This is an array of pointers to @ref umdns_recort_t structures of the
+ * resource records to be announced. This is purposefully a constant
+ * array of pointers to constants, such that these records can be stored
+ * in ROM.
+ *
+ * The last entry in the array must be NULL.
+ *
+ */
+extern const umdns_record_t * const umdnsx_resource_records[];
 
 #endif // #ifndef UMDNS_RECORDS_H

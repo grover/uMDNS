@@ -14,11 +14,8 @@
  *
  */
 
-#ifndef UMDNS_UMDNS_EXTERNAL_H
-#define UMDNS_UMDNS_EXTERNAL_H
-
-#include <stdint.h>
-#include <stdlib.h>
+#ifndef UMDNS_UMDNS_NETWORK_H
+#define UMDNS_UMDNS_NETWORK_H
 
 /**
  * @brief Structure that represents an IPv4 endpoint.
@@ -50,7 +47,7 @@ typedef struct umdns_endpoint {
  * There's no standard implementation for name conflict resolution.
  *
  */
-extern void umdns_name_conflict_detected(void);
+extern void umdnsx_name_conflict_detected(void);
 
 /**
  * @brief Called by uMDNS to initialize the network interface.
@@ -58,14 +55,14 @@ extern void umdns_name_conflict_detected(void);
  * This function should create a socket (or the equivalent on your platform),
  * bind it to port 5353 and join the MDNS multicast group.
  *
- * @retval @ref UMDNS_OK
+ * @retval @ref kUMDNSOk
  * Opening the socket and all of the above described steps have succeeded.
  *
- * @retval @ref UMDNS_ERR_FAILED
+ * @retval @ref kUMDNSErrorFailed
  * Opening the socket has failed. This will fail the initialization of uMDNS.
  *
  */
-extern int umdns_open_socket();
+extern int umdnsx_open_socket();
 
 /**
  * @brief Closes the network interface opened with @ref umdns_open_socket.
@@ -77,7 +74,7 @@ extern int umdns_open_socket();
  * network interface by leaving the multicast group and closing the interface.
  *
  */
-extern void umdns_close_socket();
+extern void umdnsx_close_socket();
 
 /**
  * @brief Sends a MDNS packet.
@@ -104,9 +101,39 @@ extern void umdns_close_socket();
  * The number of bytes to send.
  *
  */
-extern void umdns_send(
+extern void umdnsx_send(
   const umdns_endpoint_t *recipient,
   const uint8_t *packet,
   size_t length);
 
-#endif // #ifndef UMDNS_UMDNS_EXTERNAL_H
+/**
+ * @brief Passes data received from the socket to uMDNS.
+ *
+ * This function will process any incoming data from the socket and
+ * will handle it according to the current internal uMDNS state. This
+ * includes responding to queries.
+ *
+ * @param sender
+ * The IPv4 endpoint information of the sender of the MDNS packet.
+ *
+ * @param packet
+ * A pointer to the buffer of the just received data packet. The caller
+ * keeps ownership of the buffer. uMDNS will not keep references to this
+ * past the return of this function.
+ *
+ * @param length
+ * The number of bytes in packet.
+ *
+ * @retval @ref kUMDNSOk
+ * The packet was handled.
+ *
+ * @retval @ref kUMDNSErrorNotInitialized
+ * uMDNS was not initialized with @ref umdns_init.
+ *
+ */
+int umdns_packet_received(
+    const umdns_endpoint_t *sender,
+    const uint8_t *packet,
+    size_t length);
+
+#endif // #ifndef UMDNS_UMDNS_NETWORK_H

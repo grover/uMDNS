@@ -20,21 +20,20 @@
 #include <stdint.h>
 #include <stdlib.h>
 
-#include "records.h"
-#include "umdns_external.h"
-
-/// @brief Success return code
-#define UMDNS_OK (0)
-/// @brief General failure code
-#define UMDNS_ERR_FAILED (-1)
-/// @brief MDNS not initialized
-#define UMDNS_ERR_NOT_INITIALIZED (-2)
+#include "detail/umdns_result.h"
+#include "detail/umdns_records.h"
+#include "detail/umdns_state.h"
+#include "detail/umdns_scheduler.h"
+#include "detail/umdns_network.h"
 
 /**
  * @brief Initializes uMDNS.
  *
- * @retval @ref MDNS_OK
+ * @retval @ref kUMDNSOk
  * Initialization has succeeded.
+ *
+ * @retval @ref kUMDNSErrorAlreadyInitialized
+ * uMDNS has already been initialized. The second call was ignored.
  *
  */
 int umdns_init(void);
@@ -57,36 +56,6 @@ void umdns_shutdown(void);
  *
  */
 void umdns_restart_probing(void);
-
-/**
- * @brief Passes data received from the socket to uMDNS.
- *
- * This function will process any incoming data from the socket and
- * will handle it according to the current internal uMDNS state. This
- * includes responding to queries.
- *
- * @param sender
- * The IPv4 endpoint information of the sender of the MDNS packet.
- *
- * @param packet
- * A pointer to the buffer of the just received data packet. The caller
- * keeps ownership of the buffer. uMDNS will not keep references to this
- * past the return of this function.
- *
- * @param length
- * The number of bytes in packet.
- *
- * @retval @ref UMDNS_OK
- * The packet was handled.
- *
- * @retval @ref UMDNS_ERR_NOT_INITIALIZED
- * uMDNS was not initialized with @ref umdns_init.
- *
- */
-int umdns_packet_received(
-    const umdns_endpoint_t *sender,
-    const uint8_t *packet,
-    size_t length);
 
 /**
  * @mainpage uMDNS source code documentation
