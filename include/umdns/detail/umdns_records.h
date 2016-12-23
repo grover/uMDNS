@@ -6,6 +6,10 @@
  * Licensed under the MIT License. See LICENSE.md file at 
  * https://github.com/grover/uMDNS for full license information.
  *
+ * @file umdns_records.
+ *
+ * Any project using uMDNS should #include <umdns/umdns.h> instead.
+ *
  */
 
 #ifndef UMDNS_RECORDS_H

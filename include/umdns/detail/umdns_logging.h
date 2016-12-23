@@ -1,16 +1,14 @@
 /**
- * umdns.h
+ * umdns_logging.h
  * uMDNS Project
  *
  * Copyright (c) 2016 Michael Fröhlich. All rights reserved.  
  * Licensed under the MIT License. See LICENSE.md file at 
  * https://github.com/grover/uMDNS for full license information.
  *
- * @file umdns.h
- * @brief uMDNS main header
+ * @file umdns_logging.h
  *
- * Any project should include this file to gain access to all functions
- * exposed by uMDNS.
+ * Any project using uMDNS should #include <umdns/umdns.h> instead.
  *
  */
 
@@ -41,15 +39,12 @@ void umdnsx_log(const char *format, ...);
  * Use this macro instead of direct umdnsx_log calls to enable the logging
  * feature toggle to work.
  *
- * @param format
- * The printf style format string.
- *
  */
-#define UMDNS_LOG(format, ...) umdnsx_log(format, __VA_ARGS__)
+#define UMDNS_LOG(...) umdnsx_log(__VA_ARGS__)
 
 #else // #ifdef UMDNS_FEATURE_ENABLE_LOGGING
 
-#define UMDNS_LOG(format, ...)
+#define UMDNS_LOG(...)
 
 #endif // #ifdef UMDNS_FEATURE_ENABLE_LOGGING
 

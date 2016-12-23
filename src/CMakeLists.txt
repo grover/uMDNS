@@ -1,7 +1,9 @@
 
 add_library(uMDNS STATIC 
   # Source code
+  mdns_prober.c
   umdns.c
+  umdns_state.c
 
   # Include files
   ../include/umdns/umdns.h
@@ -25,4 +27,8 @@ set_property(TARGET uMDNS PROPERTY C_STANDARD_REQUIRED ON)
 target_include_directories(uMDNS PUBLIC
   ../include)
 
-target_compile_options(uMDNS PRIVATE -Werror -Weverything -pedantic -Wall -Wextra -Wno-padded)
+if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
+  target_compile_options(uMDNS PRIVATE -Werror -Weverything -pedantic -Wall -Wextra -Wno-padded)
+elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
+  target_compile_options(uMDNS PRIVATE -Werror -pedantic -Wall -Wextra -Wno-padded)
+endif()

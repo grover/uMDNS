@@ -7,10 +7,8 @@
  * https://github.com/grover/uMDNS for full license information.
  *
  * @file umdns_state.h
- * @brief uMDNS state headers.
  *
- * Any project should include #include <umdns/umdns.h> to gain
- * access to the full functionality.
+ * Any project using uMDNS should #include <umdns/umdns.h> instead.
  *
  */
 

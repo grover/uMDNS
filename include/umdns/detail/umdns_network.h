@@ -10,7 +10,9 @@
  * want to use the uMDNS library. They provide MDNS conflict notifications
  * as well as the minimal network interface required.
  *
- * @file umdns_external.h @include umdns/umdns_external.h
+ * @file umdns_network.h
+ *
+ * Any project using uMDNS should #include <umdns/umdns.h> instead.
  *
  */
 
