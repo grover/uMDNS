@@ -10,6 +10,8 @@
 
 #include <umdns/umdns.h>
 
+#include "umdns_state.h"
+
 static umdns_state_t umdns_state_ = kShutdown;
 
 umdns_state_t umdns_get_current_state(void) {

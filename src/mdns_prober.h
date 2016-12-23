@@ -14,6 +14,6 @@
 /**
  * @brief Starts probing the network for name conflicts.
  */
-void umdns_start_probing();
+void umdns_start_probing(void);
 
 #endif // #ifndef MDNS_PROBER_H
