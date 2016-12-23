@@ -11,6 +11,9 @@ matrix:
     - os: linux
       dist: trusty
       compiler: gcc
+    - os: linux
+      dist: trusty
+      compiler: clang
 addons:
   coverity_scan:
     project:
