@@ -20,6 +20,8 @@
 #include <stdint.h>
 #include <stdlib.h>
 
+#include "umdns_config.h"
+#include "detail/umdns_logging.h"
 #include "detail/umdns_result.h"
 #include "detail/umdns_records.h"
 #include "detail/umdns_state.h"

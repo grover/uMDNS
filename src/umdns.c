@@ -16,3 +16,6 @@ int umdns_init(void) {
 
 void umdns_shutdown(void) {
 }
+
+void umdns_restart_probing(void) {
+}

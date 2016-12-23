@@ -36,3 +36,6 @@
 _build*
 apidoc/
 .cmaketools.json
+
+# Generated files
+include/umdns/umdns_config.h

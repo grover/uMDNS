@@ -56,6 +56,7 @@ This project uses code that has been created by others in the open source commun
 
 * [Unity - Simple Unit Testing for C][12]
 * [Sanitizer modules for CMake][14]
+* [Feature toggles via CMake variables][15]
 
 The licenses of the respective projects apply.
 
@@ -73,3 +74,4 @@ The licenses of the respective projects apply.
 [12]: https://github.com/ThrowTheSwitch/Unity
 [13]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
 [14]: https://github.com/arsenm/sanitizers-cmake
+[15]: https://github.com/grover/CMakeFeatureToggles

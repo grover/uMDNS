@@ -192,14 +192,14 @@ that represents the remaining time a DNS resource record is valid. Including
 the TTL as part of the structures described above prevents the goal of keeping
 them in ROM.
 
-This library uses a single TTL value (determined by `UMDNS_DEFAULT_TTL`) for
+This library uses a single TTL value (determined by `UMDNS_FEATURE_DEFAULT_TTL`) for
 all record types (which is in conflict with [RFC 6762][5]) - however given the
 purpose of acting as an MDNS responder in a microcontroller it is assumed that
 the controller will be in a power saving mode most of the time. This encourages
 short and unified TTL values to give up on resource records while the device is
 in a low power state.
 
-The default value of `UMDNS_DEFAULT_TTL` is 120 seconds. This can be changed
+The default value of `UMDNS_FEATURE_DEFAULT_TTL` is 120 seconds. This can be changed
 with the feature toggles using the [CMake build system][6]. The value is written
 into the umdns_config.h file that is written as part of the build.
 

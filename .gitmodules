@@ -4,3 +4,6 @@
 [submodule "external/sanitizers-cmake"]
 	path = external/sanitizers-cmake
 	url = https://github.com/arsenm/sanitizers-cmake.git
+[submodule "external/CMakeFeatureToggles"]
+	path = external/CMakeFeatureToggles
+	url = https://github.com/grover/CMakeFeatureToggles.git
