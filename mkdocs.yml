@@ -11,8 +11,8 @@ pages:
   - Building: Building.md
   - Supported resource record types: Supported resource record types.md
 - Developing:
-  - Contributing: ../CONTRIBUTING.md
-  - Contributors: ../CONTRIBUTORS.md
-- License: ../LICENSE.md
+  - Contributing: CONTRIBUTING.md
+  - Contributors: CONTRIBUTORS.md
+- License: LICENSE.md
 
 copyright: Copyright &copy; 2016 by Michael Fr&ouml;hlich
