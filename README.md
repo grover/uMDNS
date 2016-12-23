@@ -23,9 +23,16 @@ show the general usage idea.
 
 This project uses [git submodules][13]. Use:
 
-    git clone --recursive https://github.com/grover/uMDNS
+```sh
+git clone --recursive https://github.com/grover/uMDNS
+```
 
-Please make sure that you use a version of Git that has submodule support.
+Please make sure that you use a version of Git that has submodule support. You can
+also add this project as a submodule to your git repository:
+
+```sh
+git submodule add https://github.com/grover/uMDNS
+```
 
 ## Building
 
