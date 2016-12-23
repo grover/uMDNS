@@ -8,8 +8,8 @@ Please note we have a code of conduct, please follow it in all your interactions
 ## Pull Request Process
 
 1. Ensure that your changes build with Travis CI.
-2. Update the [docs/README.md](docs/README.md) with details of changes to the interface.
-3. Ensure that you've added yourself to the [CONTRIBUTORS](CONTRIBUTORS.md) file.
+2. Update the documentation in [docs/][1] with details of changes to the interface.
+3. Ensure that you've added yourself to the [CONTRIBUTORS][2] file.
 3. Your Pull Request will be signed-off and merged by one of the team members.
 
 ## Code of Conduct
@@ -70,7 +70,7 @@ further defined and clarified by project maintainers.
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
 reported by contacting the project owner at
-[michael@michaelruck.de](michael@michaelruck.de). All complaints will be reviewed 
+[michael.ruck@michaelruck.de][3]. All complaints will be reviewed 
 and investigated and will result in a response that is deemed necessary and
 appropriate to the circumstances. The project team is obligated to maintain 
 confidentiality with regard to the reporter of an incident. Further details of
@@ -82,8 +82,11 @@ members of the project's leadership.
 
 ### Attribution
 
-This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.4,
-available at [http://contributor-covenant.org/version/1/4][version]
+This Code of Conduct is adapted from the [Contributor Covenant][4], version 1.4,
+available at [http://contributor-covenant.org/version/1/4][5]
 
-[homepage]: http://contributor-covenant.org
-[version]: http://contributor-covenant.org/version/1/4/
+[1]: https://github.com/grover/uMDNS/tree/master/docs
+[2]: CONTRIBUTORS.md
+[3]: mailto:michael.ruck@michaelruck.de
+[4]: http://contributor-covenant.org
+[5]: http://contributor-covenant.org/version/1/4/

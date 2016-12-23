@@ -20,6 +20,7 @@
 #include <stdint.h>
 #include <stdlib.h>
 
+#include "records.h"
 #include "umdns_external.h"
 
 /// @brief Success return code
