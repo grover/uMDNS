@@ -10,7 +10,7 @@
 
 #include <umdns/umdns.h>
 
-int umdns_init(void) {
+umdns_result_t umdns_init(void) {
   return kUMDNSErrorFailed;
 }
 

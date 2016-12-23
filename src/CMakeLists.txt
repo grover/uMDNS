@@ -20,6 +20,9 @@ set_feature_toggle_header(uMDNS ../include/umdns/umdns_config.h)
 add_sanitizers(uMDNS)
 
 set_property(TARGET uMDNS PROPERTY C_STANDARD 99)
+set_property(TARGET uMDNS PROPERTY C_STANDARD_REQUIRED ON)
 
 target_include_directories(uMDNS PUBLIC
   ../include)
+
+target_compile_options(uMDNS PRIVATE -Werror -Weverything -pedantic -Wall -Wextra -Wno-padded)

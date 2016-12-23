@@ -43,7 +43,7 @@ typedef enum umdns_state {
    * @brief uMDNS has detected name conflicts.
    *
    * In this state uMDNS is waiting for the resource records to be updated
-   * and @ref umdns_restart_probing to be called. It is not probing, not
+   * and umdns_restart_probing to be called. It is not probing, not
    * announcing or responding to queries. This state is similar to the
    * shutdown state except that the network connection is still silently
    * active.
@@ -75,7 +75,7 @@ typedef enum umdns_state {
 /**
  * @brief Retrieves the current uMDNS state.
  *
- * @return One of the @ref umnds_state_t values.
+ * @return One of the umnds_state_t values.
  *
  */
 umdns_state_t umdns_get_current_state(void);

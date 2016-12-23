@@ -31,10 +31,10 @@
 /**
  * @brief Initializes uMDNS.
  *
- * @retval @ref kUMDNSOk
+ * @returns kUMDNSOk
  * Initialization has succeeded.
  *
- * @retval @ref kUMDNSErrorAlreadyInitialized
+ * @returns kUMDNSErrorAlreadyInitialized
  * uMDNS has already been initialized. The second call was ignored.
  *
  */
@@ -53,7 +53,7 @@ void umdns_shutdown(void);
  * @brief Restarts probing after name conflicts.
  *
  * After the client has created new MDNS names in response to a call
- * to @ref umdns_name_conflict_detected, it should call this function
+ * to umdns_name_conflict_detected, it should call this function
  * to restart probing.
  *
  */

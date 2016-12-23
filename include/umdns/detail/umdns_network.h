@@ -41,7 +41,7 @@ typedef struct umdns_endpoint {
  * When this function is called uMDNS stops probing, announcing and responding
  * to MDNS queries for the configured records. To enable MDNS again, it is
  * expected that the client of the library changes names in the MDNS records
- * and calls @ref mdns_restart_probing to restart MDNS.
+ * and calls mdns_restart_probing to restart MDNS.
  *
  * @remarks This function should be provided by the client of the library. 
  * There's no standard implementation for name conflict resolution.
@@ -55,20 +55,20 @@ extern void umdnsx_name_conflict_detected(void);
  * This function should create a socket (or the equivalent on your platform),
  * bind it to port 5353 and join the MDNS multicast group.
  *
- * @retval @ref kUMDNSOk
+ * @returns kUMDNSOk
  * Opening the socket and all of the above described steps have succeeded.
  *
- * @retval @ref kUMDNSErrorFailed
+ * @returns kUMDNSErrorFailed
  * Opening the socket has failed. This will fail the initialization of uMDNS.
  *
  */
 extern umdns_result_t umdnsx_open_socket();
 
 /**
- * @brief Closes the network interface opened with @ref umdns_open_socket.
+ * @brief Closes the network interface opened with umdns_open_socket.
  *
  * This is the last function uMDNS calls as part of the shutdown process. It will
- * call this after all network packets have been sent via @ref umdns_send.
+ * call this after all network packets have been sent via umdns_send.
  *
  * The implementation should flush all pending network packets and shutdown the
  * network interface by leaving the multicast group and closing the interface.
@@ -87,8 +87,8 @@ extern void umdnsx_close_socket();
  * of this function call, the callee has to make a copy.
  *
  * uMDNS is not interested in error conditions arising from the network
- * stack. These should be handled by the client by calling @ref umdns_shutdown
- * and @ref umdns_init appropriately.
+ * stack. These should be handled by the client by calling umdns_shutdown
+ * and umdns_init appropriately.
  *
  * @param recipient
  * The unicast receiver of the packet. If this parameter is NULL, the packet
@@ -124,11 +124,11 @@ extern void umdnsx_send(
  * @param length
  * The number of bytes in packet.
  *
- * @retval @ref kUMDNSOk
+ * @returns kUMDNSOk
  * The packet was handled.
  *
- * @retval @ref kUMDNSErrorNotInitialized
- * uMDNS was not initialized with @ref umdns_init.
+ * @returns kUMDNSErrorNotInitialized
+ * uMDNS was not initialized with umdns_init.
  *
  */
 umdns_result_t umdns_packet_received(

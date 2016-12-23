@@ -20,7 +20,8 @@
 /**
  * @brief Callback function for scheduled callbacks.
  *
- * @see @ref umdns_schedule_callback
+ * @see
+ * See also umdns_schedule_callback
  *
  */
 typedef void (*umdns_callback_fn_t)();
@@ -32,20 +33,20 @@ typedef void (*umdns_callback_fn_t)();
  * regular intervals. Only one callback can be scheduled at any point in
  * time.
  *
- * @param time
+ * @param timeout
  * Specifies the time in milliseconds after which the callback should be
  * executed. This is a relative time from now.
  *
  * @param callback
  * The callback to invoke after the time has expired.
  *
- * @retval UMDNS_OK
+ * @returns kUMDNSOk
  * The callback was scheduled successfully.
  *
- * @retval UMDNS_ERR_ALREADY_SCHEDULED
+ * @returns kUMDNSErrorAlreadyScheduled
  * A callback is already scheduled.
  *
- * @retval UMDNS_ERR_FAILED
+ * @returns kUMDNSErrorFailed
  * The callback could not be scheduled due to other errors.
  *
  * @remarks

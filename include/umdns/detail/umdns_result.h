@@ -25,10 +25,12 @@ typedef enum umdns_result {
   kUMDNSOk = 0,
   /// @brief General failure code
   kUMDNSErrorFailed = -1,
-  /// @brief A call was made to @ref umnds_init after it was already initialized
+  /// @brief A call was made to umnds_init after it was already initialized
   kUMDNSErrorAlreadyInitialized = -2,
   /// @brief MDNS not initialized
-  kUMDNSErrorNotInitialized = -3
+  kUMDNSErrorNotInitialized = -3,
+  /// @brief A callback was already scheduled
+  kUMDNSErrorAlreadyScheduled = -4
 } umdns_result_t;
 
 #endif // #ifndef UMDNS_UMDNS_RESULT_H

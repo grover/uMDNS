@@ -93,7 +93,7 @@ typedef struct umdns_srv_record {
 /**
  * @brief The uMDNS resource records to be announced.
  *
- * This is an array of pointers to @ref umdns_recort_t structures of the
+ * This is an array of pointers to umdns_recort_t structures of the
  * resource records to be announced. This is purposefully a constant
  * array of pointers to constants, such that these records can be stored
  * in ROM.
