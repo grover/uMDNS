@@ -34,6 +34,7 @@
 
 # CMake, Doxygen etc.
 _build*
+build/*
 apidoc/
 .cmaketools.json
 
