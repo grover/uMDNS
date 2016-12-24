@@ -7,6 +7,9 @@ add_executable(uMDNSUnitTests
   test_umdns_initialization.c
   test_umdns_probing.c)
 
+set_property(TARGET uMDNSUnitTests PROPERTY C_STANDARD 99)
+set_property(TARGET uMDNSUnitTests PROPERTY C_STANDARD_REQUIRED ON)
+
 add_sanitizers(uMDNSUnitTests)
 
 target_link_libraries(uMDNSUnitTests PRIVATE
