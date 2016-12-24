@@ -1,5 +1,5 @@
 /**
- * mdns.c
+ * test_umdns_initialization.c
  * uMDNS
  *
  * Copyright (c) 2016 Michael Fröhlich. All rights reserved.  

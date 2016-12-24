@@ -3,6 +3,7 @@ add_library(uMDNS STATIC
   # Source code
   mdns_prober.c
   umdns.c
+  umdns_responder.c
   umdns_state.c
 
   # Include files

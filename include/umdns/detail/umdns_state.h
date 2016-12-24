@@ -58,7 +58,7 @@ typedef enum umdns_state {
    * queries for any of the resource records.
    *
    */
-  kAnnouncing,
+  kResponding,
 
   /**
    * @brief This is a transition state while uMDNS is sending Goodbye packets.
